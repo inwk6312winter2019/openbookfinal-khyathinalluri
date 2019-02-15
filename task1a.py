@@ -4,6 +4,19 @@ def de_punctuation(line):
              if e in line:
                   line=line.replace(e," ")                  
     return line
+#function to find unique words
+
+def unique_words(l):
+    d=[]
+    for word in l:
+        if word in d:
+           pass
+        else:
+           d.append(word)
+    return d
+
+
+#function to open files and stored the words as list
 
 def opening_file(myfile):
    c=0
@@ -13,8 +26,11 @@ def opening_file(myfile):
        line=de_punctuation(line)
        for word in line.split():
            l1.append(word.lower())
-   return l1
+       c=unique_words(l1)
+   return c
 
+
+#opening files
 
 myfile=open("Book1.txt")
 res=opening_file(myfile)
