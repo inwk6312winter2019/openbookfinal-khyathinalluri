@@ -27,6 +27,12 @@ def count_the_article(l):
 			pass
 	return c
 
+#function to sort book in descending order based on character count
+
+def sorted_words(l): 
+	l.sort(key=len) 
+	return l 
+
 
 
 #function to open files and stored the words as list
@@ -40,8 +46,9 @@ def opening_file(myfile):
        for word in line.split():
            l1.append(word.lower())
        #c=unique_words(l1)
-       d=count_the_article(l1)
-   return d
+       #d=count_the_article(l1)
+       e=sorted_words(l1)
+   return e
 
 
 #opening files
