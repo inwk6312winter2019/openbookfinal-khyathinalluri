@@ -33,7 +33,12 @@ def sorted_words(l):
 	l.sort(key=len) 
 	return l 
 
-
+#function to return a dictionary containing words in book as key and character count as values
+def character_count(l):
+    d={}
+    for word in l:
+           d[word]=len(word)
+    return d
 
 #function to open files and stored the words as list
 
@@ -47,8 +52,9 @@ def opening_file(myfile):
            l1.append(word.lower())
        #c=unique_words(l1)
        #d=count_the_article(l1)
-       e=sorted_words(l1)
-   return e
+       #e=sorted_words(l1)
+       f=character_count(l1)
+   return f
 
 
 #opening files
