@@ -40,6 +40,19 @@ def character_count(l):
            d[word]=len(word)
     return d
 
+#function to return a interger that count total no.of words start with mytuple
+
+def starts_with_vow(l):
+	mytuple=("a","e","i","o","u")
+	c=0
+	for word in l:
+		x=word[0]
+		if x in mytuple:
+			c=c+1
+	return c
+
+
+
 #function to open files and stored the words as list
 
 def opening_file(myfile):
@@ -53,8 +66,9 @@ def opening_file(myfile):
        #c=unique_words(l1)
        #d=count_the_article(l1)
        #e=sorted_words(l1)
-       f=character_count(l1)
-   return f
+       #f=character_count(l1)
+       g=starts_with_vow(l1)
+   return g
 
 
 #opening files
